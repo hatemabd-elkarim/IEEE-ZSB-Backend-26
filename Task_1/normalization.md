@@ -32,7 +32,8 @@ Starting with **Zero NF** (a table with multivalued and repeating groups) and by
 
 ---
 
-## Step 1: Remove multivalued attributes (`Student_Phone`)  
+## Step 1: Remove multivalued attributes (`Student_Phone`)
+A one more relational table is created for student_phone with taking student_name as a foreign key from the original table
 
 ### 1NF Tables:
 
@@ -50,7 +51,8 @@ Starting with **Zero NF** (a table with multivalued and repeating groups) and by
 
 ---
 
-## Step 2: Remove partial dependencies (`Student_Address` depends on `Student_Name` only)  
+## Step 2: Remove partial dependencies (`Student_Address` depends on `Student_Name` only)
+A one more table for student_address is created with taking student_name as a foreign key from the original table and mapping for composite attribute to its parts separately
 
 ### 2NF Tables:
 
@@ -77,7 +79,9 @@ Starting with **Zero NF** (a table with multivalued and repeating groups) and by
 ## Step 3: Remove transitive dependencies  
 
 * `Instructor_Dept` depends on `Instructor_Name` (not on `Student_Name` or `Course_Title`)  
-* `Dept_Building` depends on `Instructor_Dept`  
+* `Dept_Building` depends on `Instructor_Dept` 
+
+So, two more relational tables are created, the first for instructors departments, the second for departments buildings with keeping foreign key for instructor_name, dept_name in the original table, instructor_dept respectively
 
 ### 3NF Tables:
 
