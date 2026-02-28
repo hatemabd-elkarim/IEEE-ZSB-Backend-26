@@ -172,10 +172,12 @@ Heap (No Index):
 INSERT → [Just append] -> Super fast for insertions
 
 Clustered Index:
-INSERT → [Find position] → [Insert] → [Rebalance tree] -> Slow for insertions but very important to cluster a unique_identifier(Ms SQL Server clusters PK by default) if your searches are done by it frequently, since you have only one available cluster to use
+INSERT → [Find position] → [Insert] → [Rebalance tree] -> Slow for insertions but very important to cluster a unique_identifier(Ms SQL Server clusters PK by default)
+if your searches are done by it frequently, since you have only one available cluster to use
 
 Non-Clustered Index:
-INSERT → [Insert data] → [Update index] → [Rebalance] -> Slow for insertions but more useful if you make searches frequently with non_unique columns or composites of them, so you can as times as you want
+INSERT → [Insert data] → [Update index] → [Rebalance] -> Slow for insertions but more useful if you make searches frequently with non_unique columns or composites of them,
+so you can as times as you want
 ```
 
 **When You DO Need an Index:**
@@ -220,4 +222,5 @@ ROLLBACK;  -- Automatic rollback, Alice keeps her $100
 ```
 
 ---
+
 
