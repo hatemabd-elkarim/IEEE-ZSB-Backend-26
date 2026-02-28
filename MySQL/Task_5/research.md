@@ -3,6 +3,7 @@
 ### Fundamental Difference in Granularity
 
 **GROUP BY** = Collapses rows into groups (reduces output rows)
+
 **Window Functions** = Keeps all original rows (preserves output rows)
 
 ### Example
@@ -217,4 +218,5 @@ BEGIN TRANSACTION;
     UPDATE Accounts SET Balance = Balance + 100 WHERE Name = 'Bob';
 ROLLBACK;  -- Automatic rollback, Alice keeps her $100 ✓
 ```
+
 ---
