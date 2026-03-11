@@ -141,8 +141,8 @@ INSERT INTO Users(Email) VALUES ('alice@email.com')
 
 ```sql
 SELECT * FROM Users WHERE Email = 'alice@email.com'
--- Without index: Scan entire table (1 million rows) 😢
--- With index: Jump directly to row via B-Tree (3-4 lookups) 😊
+-- Without index: Scan entire table (1 million rows)
+-- With index: Jump directly to row via B-Tree (3-4 lookups)
 ```
 
 **Trade-off:** Slower writes, faster reads.
@@ -172,10 +172,12 @@ Heap (No Index):
 INSERT → [Just append] -> Super fast for insertions
 
 Clustered Index:
-INSERT → [Find position] → [Insert] → [Rebalance tree] -> Slow for insertions but very important to cluster a unique_identifier(Ms SQL Server clusters PK by default) if your searches are done by it frequently, since you have only one available cluster to use
+INSERT → [Find position] → [Insert] → [Rebalance tree] -> Slow for insertions but very important to cluster a unique_identifier(Ms SQL Server clusters PK by default)
+if your searches are done by it frequently, since you have only one available cluster to use
 
 Non-Clustered Index:
-INSERT → [Insert data] → [Update index] → [Rebalance] -> Slow for insertions but more useful if you make searches frequently with non_unique columns or composites of them, so you can as times as you want
+INSERT → [Insert data] → [Update index] → [Rebalance] -> Slow for insertions but more useful if you make searches frequently with non_unique columns or composites of them,
+so you can as times as you want
 ```
 
 **When You DO Need an Index:**
@@ -213,9 +215,12 @@ COMMIT;  -- Both succeed
 **If Crash Happens:**
 ```sql
 BEGIN TRANSACTION;
-    UPDATE Accounts SET Balance = Balance - 100 WHERE Name = 'Alice';  ✓
-    -- CRASH! 💥
+    UPDATE Accounts SET Balance = Balance - 100 WHERE Name = 'Alice';
+    -- CRASH
     UPDATE Accounts SET Balance = Balance + 100 WHERE Name = 'Bob';
-ROLLBACK;  -- Automatic rollback, Alice keeps her $100 ✓
+ROLLBACK;  -- Automatic rollback, Alice keeps her $100
 ```
+
 ---
+
+
