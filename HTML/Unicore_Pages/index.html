@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>homepage</title>
+</head>
+
+<body>
+    <nav class="navBar">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>Welcome to Unicore</h1>
+    <h3>Where Tradition meets innovation</h3>
+
+    <p>At Unicore, we believe that education should be as dynamic as the world around us. Our campus isn't just a
+        collection of
+        buildings; it's a vibrant ecosystem designed to foster curiosity, drive innovation, and build a lasting
+        community.</p>
+
+    <p>From our state-of-the-art Science & Innovation Center to the historic halls of our central quad, Unicore provides
+        the
+        perfect backdrop for your academic journey. Whether you are collaborating on ground-breaking research, engaging
+        in
+        spirited debate under the autumn leaves, or finding your voice in our diverse student organizations, you are
+        part of a
+        legacy of excellence.</p>
+
+    <img src="unicore.png" alt="Unicore Campus" style="width:100%;height:auto;">
+
+    <footer>
+        <p>Copyright © <span id="year"></span> Unicore. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear(); // extra: this js script to set the date dynamically in footer copyright
+    </script>
+</body>
+
+</html>

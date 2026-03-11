@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>signup page</title>
+</head>
+<body>
+    <nav class="navBar">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>Register for Unicore</h1>
+    <form>
+        <input type="text" placeholder="Student Name" required><br><br>
+        <input type="email" placeholder="Email" required><br><br>
+        <input type="password" placeholder="Password" required><br><br>
+        <input type="date" placeholder="Date of Birth" required><br><br>
+        <select required>
+            <option value="" disabled selected>Choose your major</option>
+            <option value="cse">CSE</option>
+            <option value="ai">Artificial Intelligence</option>
+            <option value="se">Software Engineering</option>
+        </select><br><br>
+
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label>Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label>Female</label><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Student Dashboard</title>
+</head>
+
+<body>
+    <nav class="navBar">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>Student Dashboard</h1>
+
+    <section id="student-info">
+        <h2>Student Information</h2>
+        <p>Name: John Doe</p>
+        <p>Student ID: 12345678</p>
+        <p>Major: CSE</p>
+    </section>
+
+    <section id="schedule">
+        <h2>Weekly Class Schedule</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00 - 10:30</td>
+                    <td>Electrical Machines (Lab)</td>
+                    <td>Automatic Control(section)</td>
+                    <td rowspan="2">Automatic Control</td>
+                    <td>Mathematics</td>
+                </tr>
+                <tr>
+                    <td>10:30 - 12:00</td>
+                    <td>Electrical Machines (section)</td>
+                    <td>Algorithms(section)</td>
+                    <td>Algorthims</td>
+                </tr>
+                <tr>
+                    <td>12:30 - 2:00</td>
+                    <td>Mathematics (section)</td>
+                    <td>Hardware Design</td>
+                    <td>Hardware Design (Lab)</td>
+                    <td>Electrical Machines</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="exams">
+        <h2>Upcoming Exams</h2>
+        <ul>
+            <li><a href="#">Automatic control ☠️</a></li>
+            <li><a href="#">Hardware Desgin Quiz</a></li>
+            <li><a href="#">Electrical Machines Practical</a></li>
+        </ul>
+    </section>
+</body>
+
+</html>
