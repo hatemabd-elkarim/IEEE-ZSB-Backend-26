@@ -3,6 +3,7 @@
 ### Fundamental Difference in Granularity
 
 **GROUP BY** = Collapses rows into groups (reduces output rows)
+
 **Window Functions** = Keeps all original rows (preserves output rows)
 
 ### Example
